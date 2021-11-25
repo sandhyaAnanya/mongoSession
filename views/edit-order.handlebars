@@ -1,0 +1,25 @@
+<div class="container">
+    <form action="/products/edit-product" method="POST">
+        <div class="form-group">
+            <input type="hidden" class="form-control" name="_id" id="pid"  value="{{selectedProduct._id}}" aria-describedby="pid">
+        </div>
+
+        <div class="form-group">
+            <label for="pname">Name</label>
+            <input type="text" class="form-control" name="pName" value="{{selectedProduct.pName}}" id="pname" aria-describedby="pname">
+        </div>
+
+        <div class="form-group">
+            <label for="pquantity">Quantity</label>
+            <input type="text" class="form-control" name="pquantityc" id="pquantity" value="{{selectedProduct.pDesc}}"  aria-describedby="pdesc">
+        </div>
+
+        <div class="form-group">
+            <label for="pTotalprice">Total Price</label>
+            <input type="number" class="form-control" name="pTotalprice" id="pTotalprice"
+           value="{{selectedProduct.pPrice}}"  aria-describedby="pprice">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Edit Product</button>
+    </form>
+</div>

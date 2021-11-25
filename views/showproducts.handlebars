@@ -1,0 +1,35 @@
+<div class="container">
+    <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+              <th scope="col">Total Price</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each orders}}
+        <tr>
+            <th scope="row">{{_id}}</th>
+            <td>{{pName}}</td>
+            <td>{{pquantity}}</td>
+            <td>{{ptotalPrice}}</td>
+            <td>
+                <form action="/products/show-product/{{_id}}" method="GET">
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </form>
+            </td>
+            <td>
+                <form action="/products/delete-product/{{_id}}" method="GET">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>
